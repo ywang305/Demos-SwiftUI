@@ -45,6 +45,7 @@
 		2094139A23D7CD6F00012024 /* Demo_Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094139923D7CD6F00012024 /* Demo_Rotation.swift */; };
 		2094139C23D7D66B00012024 /* Demo_Magnify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094139B23D7D66B00012024 /* Demo_Magnify.swift */; };
 		209413A023D7DF0C00012024 /* Demo_Appear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094139F23D7DF0C00012024 /* Demo_Appear.swift */; };
+		209413C323D91BA100012024 /* Demo_MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209413C223D91BA100012024 /* Demo_MapKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		2094139923D7CD6F00012024 /* Demo_Rotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Rotation.swift; sourceTree = "<group>"; };
 		2094139B23D7D66B00012024 /* Demo_Magnify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Magnify.swift; sourceTree = "<group>"; };
 		2094139F23D7DF0C00012024 /* Demo_Appear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Appear.swift; sourceTree = "<group>"; };
+		209413C223D91BA100012024 /* Demo_MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_MapKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		209389D423BECF2900A03D6E /* eb_sui_4_abs */ = {
 			isa = PBXGroup;
 			children = (
+				209413C123D91B6D00012024 /* demo_uikit_integration */,
 				2044C8F023CD59920016BD34 /* demo_gestures */,
 				20938A1223C8136300A03D6E /* demo_modifier */,
 				209389E923BECFE000A03D6E /* demo_views */,
@@ -193,6 +196,14 @@
 				2044C8EE23CD58000016BD34 /* Demo_Path.swift */,
 			);
 			path = demo_modifier;
+			sourceTree = "<group>";
+		};
+		209413C123D91B6D00012024 /* demo_uikit_integration */ = {
+			isa = PBXGroup;
+			children = (
+				209413C223D91BA100012024 /* Demo_MapKit.swift */,
+			);
+			path = demo_uikit_integration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +302,7 @@
 				20938A0123C24D7C00A03D6E /* DemoPicker.swift in Sources */,
 				209389FF23C1356600A03D6E /* DemoSegmentControl.swift in Sources */,
 				209389F923C0EB1600A03D6E /* DemoTextField.swift in Sources */,
+				209413C323D91BA100012024 /* Demo_MapKit.swift in Sources */,
 				209389F723BEE5D400A03D6E /* DemoToggle.swift in Sources */,
 				20938A0B23C423D200A03D6E /* DemoScrollView.swift in Sources */,
 				203A7FE523CC107800C53C27 /* Demo_ShapeModifier.swift in Sources */,
