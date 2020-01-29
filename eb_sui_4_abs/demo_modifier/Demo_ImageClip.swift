@@ -14,6 +14,7 @@ struct Demo_ImageClip: View {
         .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width:250, height:250)
+            //.background(Color.gray)
         .clipShape(Circle())
             .overlay(Circle().stroke(Color.black, lineWidth: 2))
         .shadow(radius: 10)
@@ -23,6 +24,6 @@ struct Demo_ImageClip: View {
 
 struct Demo_ImageClip_Previews: PreviewProvider {
     static var previews: some View {
-        Demo_ImageClip()
+        Demo_ImageClip()//.background(Color.red)
     }
 }

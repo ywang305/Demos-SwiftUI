@@ -47,6 +47,10 @@
 		209413A023D7DF0C00012024 /* Demo_Appear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094139F23D7DF0C00012024 /* Demo_Appear.swift */; };
 		209413C323D91BA100012024 /* Demo_MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209413C223D91BA100012024 /* Demo_MapKit.swift */; };
 		209413C923D9421600012024 /* Demo_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209413C823D9421600012024 /* Demo_Login.swift */; };
+		209413CB23DA72E300012024 /* Demo_ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209413CA23DA72E300012024 /* Demo_ViewModifier.swift */; };
+		209413CD23DA74F700012024 /* Demo_WebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209413CC23DA74F700012024 /* Demo_WebKit.swift */; };
+		209413D023DA776800012024 /* Demo_SKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209413CF23DA776800012024 /* Demo_SKView.swift */; };
+		209413DD23DFD15000012024 /* Demo_Eye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209413DC23DFD15000012024 /* Demo_Eye.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +96,11 @@
 		2094139F23D7DF0C00012024 /* Demo_Appear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Appear.swift; sourceTree = "<group>"; };
 		209413C223D91BA100012024 /* Demo_MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_MapKit.swift; sourceTree = "<group>"; };
 		209413C823D9421600012024 /* Demo_Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Login.swift; sourceTree = "<group>"; };
+		209413CA23DA72E300012024 /* Demo_ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_ViewModifier.swift; sourceTree = "<group>"; };
+		209413CC23DA74F700012024 /* Demo_WebKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_WebKit.swift; sourceTree = "<group>"; };
+		209413CF23DA776800012024 /* Demo_SKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_SKView.swift; sourceTree = "<group>"; };
+		209413D523DA9D5E00012024 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		209413DC23DFD15000012024 /* Demo_Eye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Eye.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +132,7 @@
 			children = (
 				209389D423BECF2900A03D6E /* eb_sui_4_abs */,
 				209389D323BECF2900A03D6E /* Products */,
+				209413D423DA9D5E00012024 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,8 +147,9 @@
 		209389D423BECF2900A03D6E /* eb_sui_4_abs */ = {
 			isa = PBXGroup;
 			children = (
+				209413DB23DFD13300012024 /* demo_component */,
 				209413C723D9420100012024 /* demo_page */,
-				209413C123D91B6D00012024 /* demo_uikit_integration */,
+				209413C123D91B6D00012024 /* demo_uikit */,
 				2044C8F023CD59920016BD34 /* demo_gestures */,
 				20938A1223C8136300A03D6E /* demo_modifier */,
 				209389E923BECFE000A03D6E /* demo_views */,
@@ -197,16 +208,19 @@
 				203A7FE423CC107800C53C27 /* Demo_ShapeModifier.swift */,
 				203A7FE623CC14AB00C53C27 /* Demo_Animation.swift */,
 				2044C8EE23CD58000016BD34 /* Demo_Path.swift */,
+				209413CA23DA72E300012024 /* Demo_ViewModifier.swift */,
 			);
 			path = demo_modifier;
 			sourceTree = "<group>";
 		};
-		209413C123D91B6D00012024 /* demo_uikit_integration */ = {
+		209413C123D91B6D00012024 /* demo_uikit */ = {
 			isa = PBXGroup;
 			children = (
+				209413D123DA77B300012024 /* spritkit */,
 				209413C223D91BA100012024 /* Demo_MapKit.swift */,
+				209413CC23DA74F700012024 /* Demo_WebKit.swift */,
 			);
-			path = demo_uikit_integration;
+			path = demo_uikit;
 			sourceTree = "<group>";
 		};
 		209413C723D9420100012024 /* demo_page */ = {
@@ -215,6 +229,30 @@
 				209413C823D9421600012024 /* Demo_Login.swift */,
 			);
 			path = demo_page;
+			sourceTree = "<group>";
+		};
+		209413D123DA77B300012024 /* spritkit */ = {
+			isa = PBXGroup;
+			children = (
+				209413CF23DA776800012024 /* Demo_SKView.swift */,
+			);
+			path = spritkit;
+			sourceTree = "<group>";
+		};
+		209413D423DA9D5E00012024 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				209413D523DA9D5E00012024 /* SceneKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		209413DB23DFD13300012024 /* demo_component */ = {
+			isa = PBXGroup;
+			children = (
+				209413DC23DFD15000012024 /* Demo_Eye.swift */,
+			);
+			path = demo_component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +335,7 @@
 				2094139C23D7D66B00012024 /* Demo_Magnify.swift in Sources */,
 				203A7FE323CC0B8400C53C27 /* DemoShapes.swift in Sources */,
 				2044C8F423CD5DE10016BD34 /* Demo_LongPress.swift in Sources */,
+				209413DD23DFD15000012024 /* Demo_Eye.swift in Sources */,
 				209389D823BECF2900A03D6E /* SceneDelegate.swift in Sources */,
 				209389FD23C1341000A03D6E /* DemoStepper.swift in Sources */,
 				20938A1A23C81CAB00A03D6E /* Demo_Gradient.swift in Sources */,
@@ -316,13 +355,16 @@
 				209413C323D91BA100012024 /* Demo_MapKit.swift in Sources */,
 				209389F723BEE5D400A03D6E /* DemoToggle.swift in Sources */,
 				20938A0B23C423D200A03D6E /* DemoScrollView.swift in Sources */,
+				209413CB23DA72E300012024 /* Demo_ViewModifier.swift in Sources */,
 				203A7FE523CC107800C53C27 /* Demo_ShapeModifier.swift in Sources */,
 				203A7FE723CC14AB00C53C27 /* Demo_Animation.swift in Sources */,
 				2044C8EF23CD58000016BD34 /* Demo_Path.swift in Sources */,
 				2094139A23D7CD6F00012024 /* Demo_Rotation.swift in Sources */,
 				20938A0D23C424E500A03D6E /* DemoSpacerDivider.swift in Sources */,
+				209413D023DA776800012024 /* Demo_SKView.swift in Sources */,
 				209413C923D9421600012024 /* Demo_Login.swift in Sources */,
 				209389F523BEE4B600A03D6E /* DemoButton.swift in Sources */,
+				209413CD23DA74F700012024 /* Demo_WebKit.swift in Sources */,
 				20938A0723C2E9DB00A03D6E /* DemoTabView.swift in Sources */,
 				209389EF23BED09200A03D6E /* DemoText.swift in Sources */,
 			);
