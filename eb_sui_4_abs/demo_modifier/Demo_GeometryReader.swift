@@ -14,7 +14,7 @@ struct Demo_GeometryReader: View {
             HStack {
                 ForEach(0..<15) { index in
                     GeometryReader { g in
-                        Text("This is item: \(index)").rotationEffect(.degrees(Double(g.frame(in: .global).minX)))
+                        Text("This is item: \(index) \(g.frame(in: .global).debugDescription)").rotationEffect(.degrees(Double(g.frame(in: .global).minX)))
                     }.frame(width: 300, height: 300).border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                 }
             }

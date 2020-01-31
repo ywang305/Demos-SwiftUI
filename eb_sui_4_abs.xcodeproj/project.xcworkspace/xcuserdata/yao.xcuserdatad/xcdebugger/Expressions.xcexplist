@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in Demo_Eye.body.getter:Demo_Eye.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "g.frame(in:.global)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in Demo_Eye.__preview__body.getter:Demo_Eye.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "g.frame(in: .global)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
