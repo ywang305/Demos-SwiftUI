@@ -30,8 +30,8 @@
             filePath = "eb_sui_4_abs/demo_component/Demo_Eye.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -39,17 +39,191 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4B8901AA-8D0F-4331-A2E2-C7208D6A8F9F"
+            uuid = "24B4D0D2-8DCD-4880-97BC-D1DB3CE81782"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eb_sui_4_abs/demo_component/Demo_Face.swift"
+            filePath = "eb_sui_4_abs/demo_component/Demo_Eye.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "drag"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B357B12-2365-4060-8636-D1C5D9F6D771"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eb_sui_4_abs/demo_dataflow/Demo_TimeCounter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5B357B12-2365-4060-8636-D1C5D9F6D771 - da48e12002c7fac8"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSTimer) -&gt; () in eb_sui_4_abs.TimeCounter.init() -&gt; eb_sui_4_abs.TimeCounter"
+                  moduleName = "eb_sui_4_abs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yao/iosprx/eb_sui_4_abs/eb_sui_4_abs/demo_dataflow/Demo_TimeCounter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "5B357B12-2365-4060-8636-D1C5D9F6D771 - c636a6ef831805f9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in eb_sui_4_abs_PreviewReplacement_Demo_TimeCounter_6):eb_sui_4_abs.TimeCounter.(__preview__killTimer in _FFB0CF08AA9FC25D0F7A25B195522CC5)() -&gt; ()"
+                  moduleName = "Demo_TimeCounter.6.preview-thunk.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yao/iosprx/eb_sui_4_abs/eb_sui_4_abs/demo_dataflow/Demo_TimeCounter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "41">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8709DB78-73C4-4340-AB87-235664814055"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eb_sui_4_abs/demo_dataflow/Demo_TimeCounter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "counter2"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "8709DB78-73C4-4340-AB87-235664814055 - a160a71fd8adf4ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "eb_sui_4_abs.TimeCounter.counter2.didset : Swift.Int"
+                  moduleName = "eb_sui_4_abs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yao/iosprx/eb_sui_4_abs/eb_sui_4_abs/demo_dataflow/Demo_TimeCounter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "139">
+               </Location>
+               <Location
+                  uuid = "8709DB78-73C4-4340-AB87-235664814055 - 8823bb9dd91fe979"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in eb_sui_4_abs_PreviewReplacement_Demo_TimeCounter_6):eb_sui_4_abs.TimeCounter.(__preview__updateCounter in _FFB0CF08AA9FC25D0F7A25B195522CC5)() -&gt; ()"
+                  moduleName = "Demo_TimeCounter.6.preview-thunk.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yao/iosprx/eb_sui_4_abs/eb_sui_4_abs/demo_dataflow/Demo_TimeCounter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "49">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C11B2487-38D4-4B64-9409-D996C553D0A6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eb_sui_4_abs/demo_dataflow/Demo_TimeCounter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "Demo_TimeCounter"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "C11B2487-38D4-4B64-9409-D996C553D0A6 - e67edc9dbb3a1407"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0 in eb_sui_4_abs.Demo_TimeCounter.body.getter : some"
+                  moduleName = "eb_sui_4_abs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yao/iosprx/eb_sui_4_abs/eb_sui_4_abs/demo_dataflow/Demo_TimeCounter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "107">
+               </Location>
+               <Location
+                  uuid = "C11B2487-38D4-4B64-9409-D996C553D0A6 - 41a60fb766e4537e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0 in eb_sui_4_abs.Demo_TimeCounter.body.getter : some"
+                  moduleName = "eb_sui_4_abs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yao/iosprx/eb_sui_4_abs/eb_sui_4_abs/demo_dataflow/Demo_TimeCounter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  uuid = "C11B2487-38D4-4B64-9409-D996C553D0A6 - 33919ff65e2a18fd"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0 in (extension in eb_sui_4_abs_PreviewReplacement_Demo_TimeCounter_6):eb_sui_4_abs.Demo_TimeCounter.(__preview__body in _FFB0CF08AA9FC25D0F7A25B195522CC5).getter : some"
+                  moduleName = "Demo_TimeCounter.6.preview-thunk.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yao/iosprx/eb_sui_4_abs/eb_sui_4_abs/demo_dataflow/Demo_TimeCounter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "107">
+               </Location>
+               <Location
+                  uuid = "C11B2487-38D4-4B64-9409-D996C553D0A6 - 1e93207fba14bd6a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0 in (extension in eb_sui_4_abs_PreviewReplacement_Demo_TimeCounter_6):eb_sui_4_abs.Demo_TimeCounter.(__preview__body in _FFB0CF08AA9FC25D0F7A25B195522CC5).getter : some"
+                  moduleName = "Demo_TimeCounter.6.preview-thunk.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yao/iosprx/eb_sui_4_abs/eb_sui_4_abs/demo_dataflow/Demo_TimeCounter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -8,7 +8,16 @@
             <PersistentString
                value = "g.frame(in:.global)">
             </PersistentString>
+            <PersistentString
+               value = "g.size">
+            </PersistentString>
+            <PersistentString
+               value = "g.frame(in: .global).midX">
+            </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in Demo_Face.drag.getter:Demo_Face.swift">
       </ContextState>
       <ContextState
          contextName = "closure #1 in Demo_Eye.__preview__body.getter:Demo_Eye.swift">

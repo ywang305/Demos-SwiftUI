@@ -13,8 +13,34 @@ let gradient = RadialGradient(gradient: Gradient(colors: [.white, .black]), cent
 
 
 struct Demo_Eye: View {
-    let loc: CGPoint
+    let loc: CGPoint?
     
+    
+    private func calOffset(_ g: GeometryProxy)->CGPoint? {
+        guard let loc = self.loc else {return nil}
+        
+        let radius = g.size.width/2
+        let rect = g.frame(in:.global)
+        
+        let dffX = loc.x - rect.midX
+        let dffY = loc.y - rect.midY
+        
+        var offX: CGFloat = 0
+        if dffX<0 {
+            offX = max(dffX, -radius/2.5)
+        } else {
+            offX = min(dffX, radius/2.5)
+        }
+        
+        var offY: CGFloat = 0
+        if dffY<0 {
+            offY = max(dffY, -radius/2.5)
+        } else {
+            offY = min(dffY, radius/2.5)
+        }
+        
+        return CGPoint.init(x: offX, y: offY)
+    }
     
     var body: some View {
         GeometryReader { g in
@@ -22,23 +48,10 @@ struct Demo_Eye: View {
                 .fill(RadialGradient(gradient: Gradient(colors: [.white, .black]), center: .center, startRadius: g.size.width/30, endRadius: g.size.width/10))
             
             .frame(width: g.size.width/2, height: g.size.width/2)
-                .offset(x: CGFloat.minimum(self.loc.x, g.size.width/4), y: CGFloat.minimum(self.loc.y, g.size.width/4))
-                .animation(Animation.spring().speed(10))
-//            // debug
-//            .gesture(
-//                DragGesture().onChanged {
-//                    if sqrt(self.loc.x*self.loc.x + self.loc.y*self.loc.y) < g.size.width/4 {
-//                        self.loc = $0.location
-//                    }
-//
-//                }.onEnded { _ in
-//                    if sqrt(self.loc.x*self.loc.x + self.loc.y*self.loc.y) > g.size.width/4 {
-//                        self.loc = .zero
-//                    }
-//                }
-//            )
-            
-        }.background(Color.yellow)
+                .offset(x: self.calOffset(g)?.x ?? 0, y: self.calOffset(g)?.y ?? 0)
+                .animation(Animation.spring().speed(100))
+            }
+        .background(Color.white)
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.black, lineWidth: 2))
             .shadow(radius: 20)
@@ -51,6 +64,6 @@ struct Demo_Eye: View {
 struct Demo_Eye_Previews: PreviewProvider {
     @State static var pt: CGPoint = .zero
     static var previews: some View {
-        Demo_Eye(loc: CGPoint.zero)
+        Demo_Eye(loc: nil)
     }
 }

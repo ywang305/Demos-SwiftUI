@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20385CEC23EBBB0400566036 /* Demo_Mouth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20385CEB23EBBB0400566036 /* Demo_Mouth.swift */; };
+		20385CF023ED14C800566036 /* Demo_Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20385CEF23ED14C800566036 /* Demo_Observable.swift */; };
+		20385CF223F07FE900566036 /* GlobalCoord+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20385CF123F07FE900566036 /* GlobalCoord+Observable.swift */; };
+		20385CF423F242C100566036 /* Demo_Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20385CF323F242C100566036 /* Demo_Shape.swift */; };
+		20385CF823F39E8200566036 /* Demo_Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20385CF723F39E8200566036 /* Demo_Body.swift */; };
+		20385CFA23F3A1E000566036 /* Demo_Frog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20385CF923F3A1E000566036 /* Demo_Frog.swift */; };
 		203A7FE123CC07FC00C53C27 /* Demo_GeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A7FE023CC07FC00C53C27 /* Demo_GeometryReader.swift */; };
 		203A7FE323CC0B8400C53C27 /* DemoShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A7FE223CC0B8400C53C27 /* DemoShapes.swift */; };
 		203A7FE523CC107800C53C27 /* Demo_ShapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A7FE423CC107800C53C27 /* Demo_ShapeModifier.swift */; };
@@ -56,6 +62,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20385CEB23EBBB0400566036 /* Demo_Mouth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Mouth.swift; sourceTree = "<group>"; };
+		20385CEF23ED14C800566036 /* Demo_Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Observable.swift; sourceTree = "<group>"; };
+		20385CF123F07FE900566036 /* GlobalCoord+Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlobalCoord+Observable.swift"; sourceTree = "<group>"; };
+		20385CF323F242C100566036 /* Demo_Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Shape.swift; sourceTree = "<group>"; };
+		20385CF723F39E8200566036 /* Demo_Body.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Body.swift; sourceTree = "<group>"; };
+		20385CF923F3A1E000566036 /* Demo_Frog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Frog.swift; sourceTree = "<group>"; };
 		203A7FE023CC07FC00C53C27 /* Demo_GeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_GeometryReader.swift; sourceTree = "<group>"; };
 		203A7FE223CC0B8400C53C27 /* DemoShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoShapes.swift; sourceTree = "<group>"; };
 		203A7FE423CC107800C53C27 /* Demo_ShapeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_ShapeModifier.swift; sourceTree = "<group>"; };
@@ -214,6 +226,7 @@
 				203A7FE623CC14AB00C53C27 /* Demo_Animation.swift */,
 				2044C8EE23CD58000016BD34 /* Demo_Path.swift */,
 				209413CA23DA72E300012024 /* Demo_ViewModifier.swift */,
+				20385CF323F242C100566036 /* Demo_Shape.swift */,
 			);
 			path = demo_modifier;
 			sourceTree = "<group>";
@@ -255,8 +268,12 @@
 		209413DB23DFD13300012024 /* demo_component */ = {
 			isa = PBXGroup;
 			children = (
+				20385CF923F3A1E000566036 /* Demo_Frog.swift */,
 				209413DC23DFD15000012024 /* Demo_Eye.swift */,
 				209413DE23E25A3900012024 /* Demo_Face.swift */,
+				20385CEB23EBBB0400566036 /* Demo_Mouth.swift */,
+				20385CF123F07FE900566036 /* GlobalCoord+Observable.swift */,
+				20385CF723F39E8200566036 /* Demo_Body.swift */,
 			);
 			path = demo_component;
 			sourceTree = "<group>";
@@ -265,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				209413E123E3CE9600012024 /* Demo_TimeCounter.swift */,
+				20385CEF23ED14C800566036 /* Demo_Observable.swift */,
 			);
 			path = demo_dataflow;
 			sourceTree = "<group>";
@@ -343,6 +361,7 @@
 				20938A0323C2517E00A03D6E /* DemoDatePicker.swift in Sources */,
 				20938A1823C81A4100A03D6E /* Demo_ImageClip.swift in Sources */,
 				20938A1623C8180500A03D6E /* Demo_ImageAsset.swift in Sources */,
+				20385CF223F07FE900566036 /* GlobalCoord+Observable.swift in Sources */,
 				20938A0523C2E19100A03D6E /* DemoNavigationView.swift in Sources */,
 				209389D623BECF2900A03D6E /* AppDelegate.swift in Sources */,
 				20938A1423C813FD00A03D6E /* Demo_Font_Color.swift in Sources */,
@@ -358,16 +377,19 @@
 				20938A0F23C5790D00A03D6E /* DemoAlert.swift in Sources */,
 				209413A023D7DF0C00012024 /* Demo_Appear.swift in Sources */,
 				20938A1123C57A2500A03D6E /* DemoList.swift in Sources */,
+				20385CFA23F3A1E000566036 /* Demo_Frog.swift in Sources */,
 				203A7FE123CC07FC00C53C27 /* Demo_GeometryReader.swift in Sources */,
 				20938A0923C4229700A03D6E /* DemoStack.swift in Sources */,
 				209389FB23C1325000A03D6E /* DemoSlider.swift in Sources */,
 				209413DF23E25A3900012024 /* Demo_Face.swift in Sources */,
 				209389F123BED2DD00A03D6E /* DemoImage.swift in Sources */,
 				209389DA23BECF2900A03D6E /* ContentView.swift in Sources */,
+				20385CEC23EBBB0400566036 /* Demo_Mouth.swift in Sources */,
 				20938A0123C24D7C00A03D6E /* DemoPicker.swift in Sources */,
 				209389FF23C1356600A03D6E /* DemoSegmentControl.swift in Sources */,
 				209389F923C0EB1600A03D6E /* DemoTextField.swift in Sources */,
 				209413C323D91BA100012024 /* Demo_MapKit.swift in Sources */,
+				20385CF023ED14C800566036 /* Demo_Observable.swift in Sources */,
 				209389F723BEE5D400A03D6E /* DemoToggle.swift in Sources */,
 				209413E223E3CE9600012024 /* Demo_TimeCounter.swift in Sources */,
 				20938A0B23C423D200A03D6E /* DemoScrollView.swift in Sources */,
@@ -377,9 +399,11 @@
 				2044C8EF23CD58000016BD34 /* Demo_Path.swift in Sources */,
 				2094139A23D7CD6F00012024 /* Demo_Rotation.swift in Sources */,
 				20938A0D23C424E500A03D6E /* DemoSpacerDivider.swift in Sources */,
+				20385CF423F242C100566036 /* Demo_Shape.swift in Sources */,
 				209413D023DA776800012024 /* Demo_SKView.swift in Sources */,
 				209413C923D9421600012024 /* Demo_Login.swift in Sources */,
 				209389F523BEE4B600A03D6E /* DemoButton.swift in Sources */,
+				20385CF823F39E8200566036 /* Demo_Body.swift in Sources */,
 				209413CD23DA74F700012024 /* Demo_WebKit.swift in Sources */,
 				20938A0723C2E9DB00A03D6E /* DemoTabView.swift in Sources */,
 				209389EF23BED09200A03D6E /* DemoText.swift in Sources */,
