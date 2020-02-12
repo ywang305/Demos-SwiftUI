@@ -13,7 +13,7 @@ import SwiftUI
 
 struct Demo_Body: View {
     var body: some View {
-        Capsule().aspectRatio(1/1.5, contentMode: .fit)
+        Capsule().opacity(0.8)
     }
 }
 

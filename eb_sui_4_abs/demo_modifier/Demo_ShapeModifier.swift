@@ -11,7 +11,7 @@ import SwiftUI
 struct Demo_Clipped: View {
     var body: some View {
         VStack {
-            Image("musle-boy").frame(width: 200, height: 200, alignment: .top).clipped()
+            Image("musle-boy").frame(width: 200, height: 200, alignment: .center).clipped()
         }
         
     }

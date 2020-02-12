@@ -11,12 +11,14 @@ import SwiftUI
 struct Demo_Frog: View {
     var body: some View {
         GeometryReader { proxy in
-            ZStack {
-                Demo_Body().padding(proxy.size.width/10).offset(x:0, y:0).opacity(0.8)
-                Demo_Face().offset(x:0, y: -proxy.size.height/4)
+            VStack(alignment: .center, spacing: -10) {
+                Demo_Face()
+                Demo_Body()
+                    //.offset(x:0, y:0).opacity(0.8)
+                
+                    //.offset(x:0, y: -proxy.size.height/4)
             }
         }.foregroundColor(Color.green)
-        .clipped()
     }
 }
 
