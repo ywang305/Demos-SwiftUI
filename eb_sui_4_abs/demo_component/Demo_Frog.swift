@@ -14,9 +14,7 @@ struct Demo_Frog: View {
             VStack(alignment: .center, spacing: -10) {
                 Demo_Face()
                 Demo_Body()
-                    //.offset(x:0, y:0).opacity(0.8)
-                
-                    //.offset(x:0, y: -proxy.size.height/4)
+
             }
         }.foregroundColor(Color.green)
     }

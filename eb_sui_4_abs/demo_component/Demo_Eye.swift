@@ -14,7 +14,7 @@ let gradient = RadialGradient(gradient: Gradient(colors: [.white, .black]), cent
 
 struct Demo_Eye: View {
     let loc: CGPoint?
-    
+    @State private var blink = false
     
     private func calOffset(_ g: GeometryProxy)->CGPoint? {
         guard let loc = self.loc else {return nil}
@@ -39,18 +39,28 @@ struct Demo_Eye: View {
             offY = min(dffY, radius/2.5)
         }
         
-        return CGPoint.init(x: offX, y: offY)
+        return CGPoint(x: offX, y: offY)
     }
     
     var body: some View {
         GeometryReader { g in
-            Circle()
-                .fill(RadialGradient(gradient: Gradient(colors: [.white, .black]), center: .center, startRadius: g.size.width/30, endRadius: g.size.width/10))
-            
-            .frame(width: g.size.width/2, height: g.size.width/2)
-                .offset(x: self.calOffset(g)?.x ?? 0, y: self.calOffset(g)?.y ?? 0)
-                .animation(Animation.spring().speed(100))
+            ZStack {
+                Circle()
+                    .fill(RadialGradient(gradient: Gradient(colors: [.white, .black]), center: .center, startRadius: g.size.width/30, endRadius: g.size.width/10))
+                    .frame(width: g.size.width/2, height: g.size.width/2)
+                    .offset(x: self.calOffset(g)?.x ?? 0, y: self.calOffset(g)?.y ?? 0)
+                    .animation(Animation.spring().speed(100))
+
+                Rectangle()
+                    .offset(x:0, y: self.blink ? 0 : -g.size.height)
+                    .animation(Animation.easeInOut(duration: 0.4).repeatForever(autoreverses: true).delay(5))
+                    //.foregroundColor(Color.green)
+                    .onAppear(){
+                        self.blink.toggle()
+                }
             }
+            
+        }
         .background(Color.white)
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.black, lineWidth: 2))
