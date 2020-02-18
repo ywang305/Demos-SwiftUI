@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200E285323FB6DC3002BB0D7 /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200E285223FB6DC3002BB0D7 /* FlashCard.swift */; };
 		20385CEC23EBBB0400566036 /* Demo_Mouth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20385CEB23EBBB0400566036 /* Demo_Mouth.swift */; };
 		20385CF023ED14C800566036 /* Demo_Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20385CEF23ED14C800566036 /* Demo_Observable.swift */; };
 		20385CF223F07FE900566036 /* GlobalCoord+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20385CF123F07FE900566036 /* GlobalCoord+Observable.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		200E285223FB6DC3002BB0D7 /* FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCard.swift; sourceTree = "<group>"; };
 		20385CEB23EBBB0400566036 /* Demo_Mouth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Mouth.swift; sourceTree = "<group>"; };
 		20385CEF23ED14C800566036 /* Demo_Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Observable.swift; sourceTree = "<group>"; };
 		20385CF123F07FE900566036 /* GlobalCoord+Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlobalCoord+Observable.swift"; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		200E285123FB6720002BB0D7 /* project */ = {
+			isa = PBXGroup;
+			children = (
+				200E285223FB6DC3002BB0D7 /* FlashCard.swift */,
+			);
+			path = project;
+			sourceTree = "<group>";
+		};
 		2044C8F023CD59920016BD34 /* demo_gestures */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +173,7 @@
 		209389D423BECF2900A03D6E /* eb_sui_4_abs */ = {
 			isa = PBXGroup;
 			children = (
+				200E285123FB6720002BB0D7 /* project */,
 				209413E023E3CE7200012024 /* demo_dataflow */,
 				209413DB23DFD13300012024 /* demo_component */,
 				209413C723D9420100012024 /* demo_page */,
@@ -392,6 +403,7 @@
 				20385CF023ED14C800566036 /* Demo_Observable.swift in Sources */,
 				209389F723BEE5D400A03D6E /* DemoToggle.swift in Sources */,
 				209413E223E3CE9600012024 /* Demo_TimeCounter.swift in Sources */,
+				200E285323FB6DC3002BB0D7 /* FlashCard.swift in Sources */,
 				20938A0B23C423D200A03D6E /* DemoScrollView.swift in Sources */,
 				209413CB23DA72E300012024 /* Demo_ViewModifier.swift in Sources */,
 				203A7FE523CC107800C53C27 /* Demo_ShapeModifier.swift in Sources */,

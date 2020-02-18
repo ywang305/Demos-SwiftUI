@@ -16,6 +16,8 @@ struct Demo_Eye: View {
     let loc: CGPoint?
     @State private var blink = false
     
+    let timerPublisher = Timer.publish(every: 5.0, on: .current, in: .common).autoconnect()
+    
     private func calOffset(_ g: GeometryProxy)->CGPoint? {
         guard let loc = self.loc else {return nil}
         
@@ -49,12 +51,12 @@ struct Demo_Eye: View {
                     .fill(RadialGradient(gradient: Gradient(colors: [.white, .black]), center: .center, startRadius: g.size.width/30, endRadius: g.size.width/10))
                     .frame(width: g.size.width/2, height: g.size.width/2)
                     .offset(x: self.calOffset(g)?.x ?? 0, y: self.calOffset(g)?.y ?? 0)
-                    .animation(Animation.spring().speed(100))
+                    .animation(Animation.spring().speed(0.1))
 
                 Rectangle()
                     .offset(x:0, y: self.blink ? 0 : -g.size.height)
-                    .animation(Animation.easeInOut(duration: 0.4).repeatForever(autoreverses: true).delay(5))
-                    //.foregroundColor(Color.green)
+                    .animation(Animation.spring().repeatForever(autoreverses: true))
+                    .foregroundColor(Color.green)
                     .onAppear(){
                         self.blink.toggle()
                 }

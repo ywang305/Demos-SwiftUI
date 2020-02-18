@@ -32,8 +32,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
             endingLineNumber = "46"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "Demo_Eye"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -98,38 +98,6 @@
             endingLineNumber = "20"
             landmarkName = "counter2"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "8709DB78-73C4-4340-AB87-235664814055 - a160a71fd8adf4ea"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "eb_sui_4_abs.TimeCounter.counter2.didset : Swift.Int"
-                  moduleName = "eb_sui_4_abs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yao/iosprx/eb_sui_4_abs/eb_sui_4_abs/demo_dataflow/Demo_TimeCounter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "139">
-               </Location>
-               <Location
-                  uuid = "8709DB78-73C4-4340-AB87-235664814055 - 8823bb9dd91fe979"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(extension in eb_sui_4_abs_PreviewReplacement_Demo_TimeCounter_6):eb_sui_4_abs.TimeCounter.(__preview__updateCounter in _FFB0CF08AA9FC25D0F7A25B195522CC5)() -&gt; ()"
-                  moduleName = "Demo_TimeCounter.6.preview-thunk.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yao/iosprx/eb_sui_4_abs/eb_sui_4_abs/demo_dataflow/Demo_TimeCounter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "49">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
