@@ -9,37 +9,38 @@
 import SwiftUI
 
 struct FlashCard: View {
-    let word: String
+    let word: String?
     
+    var removal: (()->Void)? = nil
     var drag : some Gesture {
-        DragGesture()
-            .onChanged{self.offset=$0.translation}
-            .onEnded{ value in
-                let throttle: CGFloat = 30
-                let dragSize = value.translation
-                if dragSize.width > throttle {
-                    print( "w +  \(dragSize.width) " )
-                } else if dragSize.width < -throttle {
-                    print ("w -  \(dragSize.width)")
-                } else if dragSize.height > throttle {
-                    print (" h + 20 ")
-                } else if dragSize.height < -throttle {
-                    print(" h - 20 ")
-                } else {
-                    print(" zero ")
-                    self.offset = .zero
-                }
+        DragGesture().onChanged{
+            self.offset=$0.translation
+        }.onEnded{
+            let w = $0.translation.width
+            let h = $0.translation.height
+            let d = sqrt(w*w + h*h)
+            if d>100 {
+                // remove card
+                self.removal?()
+            } else {
+                self.offset = .zero
+            }
+            
         }
     }
     
     @State private var offset: CGSize = .zero
     
+    
     var body: some View {
         
-        return Text(self.word)
-            .modifier(CardStyle())
-            .offset(self.offset)
-            .gesture(drag)
+        VStack {
+            Text(self.word ?? "No more")
+                .modifier(CardStyle())
+                .offset(self.offset)
+                .gesture(self.drag)
+        }
+        
     }
 }
 
