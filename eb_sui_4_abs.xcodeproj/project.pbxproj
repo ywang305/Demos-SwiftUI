@@ -63,6 +63,8 @@
 		20C5F95D23FCD16C0038675B /* WordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F95C23FCD16C0038675B /* WordStore.swift */; };
 		20C5F95F23FCD2560038675B /* CardListPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F95E23FCD2560038675B /* CardListPanel.swift */; };
 		20C5F96123FCE6D00038675B /* Demo_Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96023FCE6D00038675B /* Demo_Transition.swift */; };
+		20C5F96323FE18280038675B /* Demo_onDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96223FE18280038675B /* Demo_onDelete.swift */; };
+		20C5F96523FE24E80038675B /* Demo_purelyDeleteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96423FE24E80038675B /* Demo_purelyDeleteItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +127,8 @@
 		20C5F95C23FCD16C0038675B /* WordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStore.swift; sourceTree = "<group>"; };
 		20C5F95E23FCD2560038675B /* CardListPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListPanel.swift; sourceTree = "<group>"; };
 		20C5F96023FCE6D00038675B /* Demo_Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Transition.swift; sourceTree = "<group>"; };
+		20C5F96223FE18280038675B /* Demo_onDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_onDelete.swift; sourceTree = "<group>"; };
+		20C5F96423FE24E80038675B /* Demo_purelyDeleteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_purelyDeleteItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +251,7 @@
 				209413CA23DA72E300012024 /* Demo_ViewModifier.swift */,
 				20385CF323F242C100566036 /* Demo_Shape.swift */,
 				20C5F96023FCE6D00038675B /* Demo_Transition.swift */,
+				20C5F96223FE18280038675B /* Demo_onDelete.swift */,
 			);
 			path = demo_modifier;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 			children = (
 				209413E123E3CE9600012024 /* Demo_TimeCounter.swift */,
 				20385CEF23ED14C800566036 /* Demo_Observable.swift */,
+				20C5F96423FE24E80038675B /* Demo_purelyDeleteItem.swift */,
 			);
 			path = demo_dataflow;
 			sourceTree = "<group>";
@@ -418,6 +424,7 @@
 				209389FF23C1356600A03D6E /* DemoSegmentControl.swift in Sources */,
 				209389F923C0EB1600A03D6E /* DemoTextField.swift in Sources */,
 				209413C323D91BA100012024 /* Demo_MapKit.swift in Sources */,
+				20C5F96323FE18280038675B /* Demo_onDelete.swift in Sources */,
 				20385CF023ED14C800566036 /* Demo_Observable.swift in Sources */,
 				209389F723BEE5D400A03D6E /* DemoToggle.swift in Sources */,
 				209413E223E3CE9600012024 /* Demo_TimeCounter.swift in Sources */,
@@ -426,6 +433,7 @@
 				209413CB23DA72E300012024 /* Demo_ViewModifier.swift in Sources */,
 				203A7FE523CC107800C53C27 /* Demo_ShapeModifier.swift in Sources */,
 				203A7FE723CC14AB00C53C27 /* Demo_Animation.swift in Sources */,
+				20C5F96523FE24E80038675B /* Demo_purelyDeleteItem.swift in Sources */,
 				2044C8EF23CD58000016BD34 /* Demo_Path.swift in Sources */,
 				20C5F96123FCE6D00038675B /* Demo_Transition.swift in Sources */,
 				2094139A23D7CD6F00012024 /* Demo_Rotation.swift in Sources */,

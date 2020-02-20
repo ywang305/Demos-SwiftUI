@@ -12,6 +12,7 @@ struct FlashCard: View {
     let word: String?
     
     var removal: (()->Void)? = nil
+    
     var drag : some Gesture {
         DragGesture().onChanged{
             self.offset=$0.translation
@@ -51,7 +52,7 @@ struct CardStyle: ViewModifier {
             .frame(maxWidth: 300, maxHeight:200)
             .font(.largeTitle)
             .foregroundColor(Color.black)
-            .background(Color.blue.opacity(0.2))
+            .background(Color.blue)
             .clipShape(RoundedRectangle(cornerRadius: 20))
             .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray.opacity(0.5), lineWidth: 1))
             .shadow(radius: 10)

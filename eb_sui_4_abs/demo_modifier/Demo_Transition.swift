@@ -21,7 +21,7 @@ struct Demo_Transition: View {
             }
             
             if show1 {
-                Text("Hello Disney").transition(.asymmetric(insertion: .opacity, removal: .slide))
+                Text("Hello Disney").transition(.asymmetric(insertion: .scale, removal: .slide))
             }
             
             if show2 {

@@ -9,27 +9,34 @@
 import SwiftUI
 
 struct CardListPanel: View {
-    @ObservedObject var wordStore = WordStore()
+    //@ObservedObject var wordStore = WordStore()
+    @State var words = [String]()
+
     
-    @State var step = 0
-    
+    func randomString(length: Int) -> String {
+      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      return String((0..<length).map{ _ in letters.randomElement()! })
+    }
     
     var body: some View {
-        let list = self.wordStore.wordList
-        let word = list.first
-        return VStack {
-            FlashCard(word: word, removal: {
-                if let word = word {
-                    self.wordStore.remove(word: word)
-                }
-            })
-        }
+        VStack{
             
-//            Picker("CardPicker", selection: $step){
-//                ForEach(0..<count-1) { index in
-//                    Text(list[index]).tag(index)
-//                }
-//            }.pickerStyle(SegmentedPickerStyle())
+            ZStack {
+                ForEach(self.words, id: \.self) { w in
+                    FlashCard(word: w, removal: {
+                        let found = self.words.firstIndex(of: w)!
+                        self.words.remove(at: found)
+                    })
+                }
+                
+            }
+            
+            Button(action: {
+                self.words.append(self.randomString(length: 6))
+            }) {
+                Text("Add Random")
+            }
+        }
     }
 }
 
