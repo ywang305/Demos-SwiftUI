@@ -21,12 +21,12 @@ struct Demo_Transition: View {
             }
             
             if show1 {
-                Text("Hello Disney").transition(.asymmetric(insertion: .scale, removal: .slide))
+                Text("Hello Disney").transition(.asymmetric(insertion: .slide, removal: .opacity))
             }
             
             if show2 {
                 Text("Hello NYC")
-                    .transition(AnyTransition.slide.animation(.easeInOut(duration: 2.0)))
+                    .transition(.asymmetric(insertion: .scale, removal: .identity))
             }
             
             Spacer()

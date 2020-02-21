@@ -8,10 +8,23 @@
 
 import SwiftUI
 
+
+extension AnyTransition {
+    static var moveAndFade: AnyTransition {
+        let insertion = AnyTransition.move(edge: .trailing)
+            .combined(with: .scale)
+            .combined(with: .opacity)
+        let removal = AnyTransition.scale
+            .combined(with: .opacity)
+        return .asymmetric(insertion: insertion, removal: removal)
+    }
+}
+
+
 struct FlashCard: View {
-    let word: String?
-    
-    var removal: (()->Void)? = nil
+    let word: String
+    let onRemoval: (()->Void)?
+    @State private var show = false
     
     var drag : some Gesture {
         DragGesture().onChanged{
@@ -22,11 +35,14 @@ struct FlashCard: View {
             let d = sqrt(w*w + h*h)
             if d>100 {
                 // remove card
-                self.removal?()
+                withAnimation(.easeInOut(duration: 1.0)) {
+                    self.show.toggle()
+                    self.onRemoval?()
+                }
+                
             } else {
                 self.offset = .zero
             }
-            
         }
     }
     
@@ -36,10 +52,19 @@ struct FlashCard: View {
     var body: some View {
         
         VStack {
-            Text(self.word ?? "No more")
+            if(self.show) {
+                Text(self.word)
                 .modifier(CardStyle())
                 .offset(self.offset)
-                .gesture(self.drag)
+                    .gesture(self.drag)
+                    .transition(.moveAndFade)
+            }
+            
+        }.onAppear{
+            withAnimation(.easeInOut(duration: 1.0)) {
+                self.show.toggle()
+            }
+            
         }
         
     }
@@ -54,7 +79,7 @@ struct CardStyle: ViewModifier {
             .foregroundColor(Color.black)
             .background(Color.blue)
             .clipShape(RoundedRectangle(cornerRadius: 20))
-            .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray.opacity(0.5), lineWidth: 1))
+            .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.white.opacity(0.8), lineWidth: 2))
             .shadow(radius: 10)
     }
     
@@ -62,7 +87,7 @@ struct CardStyle: ViewModifier {
 
 struct FlashCard_Previews: PreviewProvider {
     static var previews: some View {
-        FlashCard(word: "sun" )
+        FlashCard(word: "sun" ) {}
             .environment(\.colorScheme, .dark)
     }
 }

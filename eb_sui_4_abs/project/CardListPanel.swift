@@ -9,33 +9,27 @@
 import SwiftUI
 
 struct CardListPanel: View {
-    //@ObservedObject var wordStore = WordStore()
-    @State var words = [String]()
-
-    
-    func randomString(length: Int) -> String {
-      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-      return String((0..<length).map{ _ in letters.randomElement()! })
+    @ObservedObject private var wordStore = WordStore.shared
+    private var words : [String] {
+        wordStore.words
     }
     
+    
+    
     var body: some View {
-        VStack{
-            
+        VStack(alignment: .center, spacing: 40){
             ZStack {
-                ForEach(self.words, id: \.self) { w in
-                    FlashCard(word: w, removal: {
+                ForEach(words, id: \.self) { w in
+                    FlashCard(word: w) {
+                        // onRemoval
                         let found = self.words.firstIndex(of: w)!
-                        self.words.remove(at: found)
-                    })
+                        self.wordStore.words.remove(at: found)
+                    }
                 }
                 
             }
             
-            Button(action: {
-                self.words.append(self.randomString(length: 6))
-            }) {
-                Text("Add Random")
-            }
+            AddWord().animation(nil)
         }
     }
 }

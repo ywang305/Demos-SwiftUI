@@ -65,6 +65,7 @@
 		20C5F96123FCE6D00038675B /* Demo_Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96023FCE6D00038675B /* Demo_Transition.swift */; };
 		20C5F96323FE18280038675B /* Demo_onDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96223FE18280038675B /* Demo_onDelete.swift */; };
 		20C5F96523FE24E80038675B /* Demo_purelyDeleteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96423FE24E80038675B /* Demo_purelyDeleteItem.swift */; };
+		20C5F96823FF87DA0038675B /* AddWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96723FF87DA0038675B /* AddWord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +130,7 @@
 		20C5F96023FCE6D00038675B /* Demo_Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Transition.swift; sourceTree = "<group>"; };
 		20C5F96223FE18280038675B /* Demo_onDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_onDelete.swift; sourceTree = "<group>"; };
 		20C5F96423FE24E80038675B /* Demo_purelyDeleteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_purelyDeleteItem.swift; sourceTree = "<group>"; };
+		20C5F96723FF87DA0038675B /* AddWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		200E285123FB6720002BB0D7 /* project */ = {
 			isa = PBXGroup;
 			children = (
+				20C5F96623FF87A60038675B /* ParentMode */,
 				20C5F95B23FCD13D0038675B /* store */,
 				200E285223FB6DC3002BB0D7 /* FlashCard.swift */,
 				20C5F95E23FCD2560038675B /* CardListPanel.swift */,
@@ -321,6 +324,14 @@
 			path = store;
 			sourceTree = "<group>";
 		};
+		20C5F96623FF87A60038675B /* ParentMode */ = {
+			isa = PBXGroup;
+			children = (
+				20C5F96723FF87DA0038675B /* AddWord.swift */,
+			);
+			path = ParentMode;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -397,6 +408,7 @@
 				20938A1623C8180500A03D6E /* Demo_ImageAsset.swift in Sources */,
 				20385CF223F07FE900566036 /* GlobalCoord+Observable.swift in Sources */,
 				20938A0523C2E19100A03D6E /* DemoNavigationView.swift in Sources */,
+				20C5F96823FF87DA0038675B /* AddWord.swift in Sources */,
 				209389D623BECF2900A03D6E /* AppDelegate.swift in Sources */,
 				20938A1423C813FD00A03D6E /* Demo_Font_Color.swift in Sources */,
 				2094139C23D7D66B00012024 /* Demo_Magnify.swift in Sources */,

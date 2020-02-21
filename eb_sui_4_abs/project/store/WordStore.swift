@@ -10,9 +10,7 @@ import Foundation
 import Combine
 
 class WordStore: ObservableObject {
-    @Published var wordList: [String] = ["sun", "moon", "girl", "tree","boy", "brother", "father", "car", "school", "touch"]
+    static let shared = WordStore()
     
-    func remove(word: String) {
-        self.wordList = self.wordList.filter{$0 != word}
-    }
+    @Published var words: [String] = ["sun", "moon", "girl", "tree","boy", "brother", "father", "car", "school", "touch"]
 }
