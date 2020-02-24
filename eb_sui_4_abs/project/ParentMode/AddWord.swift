@@ -11,32 +11,22 @@ import SwiftUI
 struct AddWord: View {
     @ObservedObject private var wordstore = WordStore.shared
     
-    @State private var show = false
-    @State private var word = ""
+    @State private var word: String = ""
     
     var body: some View {
-        HStack {
-            if self.show {
-                TextField("Add New Word To List", text: $word)
+        HStack(alignment: .center, spacing: 20) {
+            TextField("Add New Word To List", text: $word)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                Button(action: {
-                    self.wordstore.words.insert(self.word, at: 0)
-                    self.word = ""
-                }) {
-                    Text("Add")
-                }.padding(.horizontal)
-            }
-            
-            Spacer()
-            
             
             Button(action: {
-                self.show.toggle()
+                if !self.word.isEmpty {
+                    self.wordstore.insert(word: self.word)
+                    self.word = ""
+                }
             }) {
-                Image(systemName: self.show ? "chevron.down.circle": "chevron.up.circle").font(.largeTitle)
+                Text("Add")
             }
-        }
+        }.animation(nil)
     }
 }
 

@@ -61,11 +61,11 @@
 		209413DF23E25A3900012024 /* Demo_Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209413DE23E25A3900012024 /* Demo_Face.swift */; };
 		209413E223E3CE9600012024 /* Demo_TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209413E123E3CE9600012024 /* Demo_TimeCounter.swift */; };
 		20C5F95D23FCD16C0038675B /* WordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F95C23FCD16C0038675B /* WordStore.swift */; };
-		20C5F95F23FCD2560038675B /* CardListPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F95E23FCD2560038675B /* CardListPanel.swift */; };
 		20C5F96123FCE6D00038675B /* Demo_Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96023FCE6D00038675B /* Demo_Transition.swift */; };
 		20C5F96323FE18280038675B /* Demo_onDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96223FE18280038675B /* Demo_onDelete.swift */; };
 		20C5F96523FE24E80038675B /* Demo_purelyDeleteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96423FE24E80038675B /* Demo_purelyDeleteItem.swift */; };
 		20C5F96823FF87DA0038675B /* AddWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96723FF87DA0038675B /* AddWord.swift */; };
+		20C5F96A24031A090038675B /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96924031A090038675B /* CardStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,11 +126,11 @@
 		209413DE23E25A3900012024 /* Demo_Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Face.swift; sourceTree = "<group>"; };
 		209413E123E3CE9600012024 /* Demo_TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_TimeCounter.swift; sourceTree = "<group>"; };
 		20C5F95C23FCD16C0038675B /* WordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStore.swift; sourceTree = "<group>"; };
-		20C5F95E23FCD2560038675B /* CardListPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListPanel.swift; sourceTree = "<group>"; };
 		20C5F96023FCE6D00038675B /* Demo_Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Transition.swift; sourceTree = "<group>"; };
 		20C5F96223FE18280038675B /* Demo_onDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_onDelete.swift; sourceTree = "<group>"; };
 		20C5F96423FE24E80038675B /* Demo_purelyDeleteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_purelyDeleteItem.swift; sourceTree = "<group>"; };
 		20C5F96723FF87DA0038675B /* AddWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWord.swift; sourceTree = "<group>"; };
+		20C5F96924031A090038675B /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +150,6 @@
 				20C5F96623FF87A60038675B /* ParentMode */,
 				20C5F95B23FCD13D0038675B /* store */,
 				200E285223FB6DC3002BB0D7 /* FlashCard.swift */,
-				20C5F95E23FCD2560038675B /* CardListPanel.swift */,
 			);
 			path = project;
 			sourceTree = "<group>";
@@ -328,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				20C5F96723FF87DA0038675B /* AddWord.swift */,
+				20C5F96924031A090038675B /* CardStack.swift */,
 			);
 			path = ParentMode;
 			sourceTree = "<group>";
@@ -420,6 +420,7 @@
 				20938A1A23C81CAB00A03D6E /* Demo_Gradient.swift in Sources */,
 				2044C8F223CD59BE0016BD34 /* Demo_Tap.swift in Sources */,
 				2044C8F623CD5E920016BD34 /* Demo_Drag.swift in Sources */,
+				20C5F96A24031A090038675B /* CardStack.swift in Sources */,
 				20938A0F23C5790D00A03D6E /* DemoAlert.swift in Sources */,
 				209413A023D7DF0C00012024 /* Demo_Appear.swift in Sources */,
 				20938A1123C57A2500A03D6E /* DemoList.swift in Sources */,
@@ -455,7 +456,6 @@
 				209413C923D9421600012024 /* Demo_Login.swift in Sources */,
 				209389F523BEE4B600A03D6E /* DemoButton.swift in Sources */,
 				20385CF823F39E8200566036 /* Demo_Body.swift in Sources */,
-				20C5F95F23FCD2560038675B /* CardListPanel.swift in Sources */,
 				209413CD23DA74F700012024 /* Demo_WebKit.swift in Sources */,
 				20938A0723C2E9DB00A03D6E /* DemoTabView.swift in Sources */,
 				209389EF23BED09200A03D6E /* DemoText.swift in Sources */,

@@ -12,5 +12,11 @@ import Combine
 class WordStore: ObservableObject {
     static let shared = WordStore()
     
-    @Published var words: [String] = ["sun", "moon", "girl", "tree","boy", "brother", "father", "car", "school", "touch"]
+    @Published var words : [String] = ["sun", "moon", "girl", "tree", "car", "school", "touch"]
+    
+    func insert(word: String) -> Void {
+        if !words.contains(word) {
+            words.insert(word, at: 0)
+        }
+    }
 }
