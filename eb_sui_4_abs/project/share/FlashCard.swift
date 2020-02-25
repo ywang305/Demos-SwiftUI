@@ -18,13 +18,25 @@ extension AnyTransition {
             .combined(with: .opacity)
         return .asymmetric(insertion: insertion, removal: removal)
     }
+    
+    static func moveAndFadeHandler(_ offset: CGSize) -> AnyTransition {
+        let w = offset.width
+        let h = offset.height
+        let outEdge: Edge = abs(w)>abs(h) ? (w > 0 ? .trailing : .leading ) : ( h>0 ? .bottom : .top)
+        
+        let insertion = AnyTransition.move(edge: .trailing)
+            .combined(with: .scale)
+            .combined(with: .opacity)
+        let removal = AnyTransition.move(edge: outEdge)
+            .combined(with: .opacity)
+        return .asymmetric(insertion: insertion, removal: removal)
+    }
 }
 
 
 struct FlashCard: View {
     let word: String
     let onRemoval: (()->Void)?
-    @State private var show = false
     
     var drag : some Gesture {
         DragGesture().onChanged{
@@ -32,9 +44,8 @@ struct FlashCard: View {
         }.onEnded{
             let w = $0.translation.width
             let h = $0.translation.height
-            let d = sqrt(w*w + h*h)
+            let d = sqrt(w*w+h*h)
             if d>100 {
-                // remove card
                 withAnimation(.easeInOut(duration: 1.0)) {
                     self.show.toggle()
                     self.onRemoval?()
@@ -46,6 +57,7 @@ struct FlashCard: View {
         }
     }
     
+    @State private var show = false
     @State private var offset: CGSize = .zero
     
     
@@ -57,7 +69,7 @@ struct FlashCard: View {
                 .modifier(CardStyle())
                 .offset(self.offset)
                     .gesture(self.drag)
-                    .transition(.moveAndFade)
+                    .transition(.moveAndFadeHandler(self.offset))
             }
             
         }.onAppear{
@@ -79,7 +91,7 @@ struct CardStyle: ViewModifier {
             .foregroundColor(Color.black)
             .background(Color.blue)
             .clipShape(RoundedRectangle(cornerRadius: 20))
-            .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.white.opacity(0.8), lineWidth: 2))
+            .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.yellow.opacity(0.8), lineWidth: 2))
             //.shadow(radius: 10)
     }
     

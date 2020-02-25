@@ -23,6 +23,9 @@ struct Demo_Transition: View {
             if show1 {
                 Text("Hello Disney").transition(.asymmetric(insertion: .slide, removal: .opacity))
             }
+            if show1 {
+                Text("Hello Brad").transition(AnyTransition.move(edge: .leading).combined(with: .opacity))
+            }
             
             if show2 {
                 Text("Hello NYC")

@@ -13,18 +13,20 @@ struct AddWord: View {
     
     @State private var word: String = ""
     
+    private func submit() {
+        if !self.word.isEmpty {
+            self.wordstore.insert(word: self.word)
+            self.word = ""
+        }
+    }
+    
     var body: some View {
         HStack(alignment: .center, spacing: 20) {
-            TextField("Add New Word To List", text: $word)
+            TextField("Add New Word To List", text: $word, onCommit: submit)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
-            Button(action: {
-                if !self.word.isEmpty {
-                    self.wordstore.insert(word: self.word)
-                    self.word = ""
-                }
-            }) {
-                Text("Add")
+            Button(action: submit) {
+                Text("ADD")
             }
         }.animation(nil)
     }
