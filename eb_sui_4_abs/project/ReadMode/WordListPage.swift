@@ -25,8 +25,8 @@ struct WordListPage: View {
                     ForEach(words, id: \.self) {
                         Text("\($0)")
                     }.onDelete(perform: removeRows)
-                }.navigationBarItems(leading: EditButton())
-                    .navigationBarTitle("Reviewing Words")
+                }.navigationBarItems(leading: EditButton()).navigationBarTitle("Word List", displayMode: .inline)
+                    
             }
             
             AddWord().padding()

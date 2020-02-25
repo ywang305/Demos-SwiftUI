@@ -25,7 +25,7 @@ struct ReviewCardPage: View {
                 }
                 
                 
-            }.padding()
+                }.padding()
             
             
         }
