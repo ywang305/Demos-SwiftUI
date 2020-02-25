@@ -9,7 +9,10 @@
 import SwiftUI
 
 struct WordListPage: View {
+    @ObservedObject private var keyboard = KeyboardResponder()
+    
     @ObservedObject private var wordStore = WordStore.shared
+    
     private var words: [String] {
         wordStore.words
     }
@@ -23,11 +26,13 @@ struct WordListPage: View {
                         Text("\($0)")
                     }.onDelete(perform: removeRows)
                 }.navigationBarItems(leading: EditButton())
-                .navigationBarTitle("Reviewing Words")
+                    .navigationBarTitle("Reviewing Words")
             }
             
             AddWord().padding()
-        }
+        }.padding(.bottom, keyboard.currentHeight)
+            .edgesIgnoringSafeArea(.bottom)
+            .animation(.easeOut(duration: 0.16))
     }
     
     func removeRows(at offsets: IndexSet) {

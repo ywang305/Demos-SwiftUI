@@ -68,6 +68,7 @@
 		20C5F96A24031A090038675B /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96924031A090038675B /* CardStack.swift */; };
 		20C5F96D2404C1E70038675B /* ReviewCardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96C2404C1E70038675B /* ReviewCardPage.swift */; };
 		20C5F96F2404C5790038675B /* WordListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96E2404C5790038675B /* WordListPage.swift */; };
+		DA11886824056BCE00125774 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11886724056BCE00125774 /* KeyboardResponder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +136,7 @@
 		20C5F96924031A090038675B /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
 		20C5F96C2404C1E70038675B /* ReviewCardPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardPage.swift; sourceTree = "<group>"; };
 		20C5F96E2404C5790038675B /* WordListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListPage.swift; sourceTree = "<group>"; };
+		DA11886724056BCE00125774 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyboardResponder.swift; path = eb_sui_4_abs/project/utils/KeyboardResponder.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,9 +153,9 @@
 		200E285123FB6720002BB0D7 /* project */ = {
 			isa = PBXGroup;
 			children = (
-				20C5F9702404C5FC0038675B /* utils */,
+				DA11886924056BEE00125774 /* utils */,
 				20C5F96B2404C1380038675B /* share */,
-				20C5F96623FF87A60038675B /* ParentMode */,
+				20C5F96623FF87A60038675B /* ReadMode */,
 				20C5F95B23FCD13D0038675B /* store */,
 			);
 			path = project;
@@ -328,14 +330,14 @@
 			path = store;
 			sourceTree = "<group>";
 		};
-		20C5F96623FF87A60038675B /* ParentMode */ = {
+		20C5F96623FF87A60038675B /* ReadMode */ = {
 			isa = PBXGroup;
 			children = (
 				20C5F96723FF87DA0038675B /* AddWord.swift */,
 				20C5F96C2404C1E70038675B /* ReviewCardPage.swift */,
 				20C5F96E2404C5790038675B /* WordListPage.swift */,
 			);
-			path = ParentMode;
+			path = ReadMode;
 			sourceTree = "<group>";
 		};
 		20C5F96B2404C1380038675B /* share */ = {
@@ -347,9 +349,10 @@
 			path = share;
 			sourceTree = "<group>";
 		};
-		20C5F9702404C5FC0038675B /* utils */ = {
+		DA11886924056BEE00125774 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				DA11886724056BCE00125774 /* KeyboardResponder.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				2044C8F223CD59BE0016BD34 /* Demo_Tap.swift in Sources */,
 				2044C8F623CD5E920016BD34 /* Demo_Drag.swift in Sources */,
 				20C5F96A24031A090038675B /* CardStack.swift in Sources */,
+				DA11886824056BCE00125774 /* KeyboardResponder.swift in Sources */,
 				20938A0F23C5790D00A03D6E /* DemoAlert.swift in Sources */,
 				20C5F96D2404C1E70038675B /* ReviewCardPage.swift in Sources */,
 				209413A023D7DF0C00012024 /* Demo_Appear.swift in Sources */,
@@ -620,6 +624,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"eb_sui_4_abs/Preview Content\"";
+				DEVELOPMENT_TEAM = C2J48U7J47;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = eb_sui_4_abs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -639,6 +644,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"eb_sui_4_abs/Preview Content\"";
+				DEVELOPMENT_TEAM = C2J48U7J47;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = eb_sui_4_abs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
