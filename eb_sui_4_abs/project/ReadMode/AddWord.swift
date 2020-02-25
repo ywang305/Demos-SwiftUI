@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct AddWord: View {
+    @ObservedObject private var keyboard = KeyboardResponder()
     @ObservedObject private var wordstore = WordStore.shared
     
     @State private var word: String = ""
@@ -28,8 +29,22 @@ struct AddWord: View {
             Button(action: submit) {
                 Text("ADD")
             }
-        }.animation(nil)
+        }.modifier(ResponsivePadding(keybordHeight: keyboard.currentHeight))
+        .navigationBarItems(trailing: EditButton())
+        .navigationBarTitle("Word List", displayMode: .inline)
     }
+}
+
+struct ResponsivePadding: ViewModifier {
+    let keybordHeight: CGFloat
+    
+    func body(content: Content) -> some View {
+        return content
+            .padding(.bottom, keybordHeight)
+            .edgesIgnoringSafeArea(.bottom)
+            .animation(.easeOut(duration: 0.16))
+    }
+    
 }
 
 struct AddWord_Previews: PreviewProvider {

@@ -9,8 +9,7 @@
 import SwiftUI
 
 struct WordListPage: View {
-    
-    @ObservedObject private var keyboard = KeyboardResponder()
+
     @ObservedObject private var wordStore = WordStore.shared
     
     private var words: [String] {
@@ -26,9 +25,7 @@ struct WordListPage: View {
                 }.onDelete(perform: removeRows)
             }
             AddWord().padding()
-        }.modifier(ResponsivePadding(keybordHeight: keyboard.currentHeight))
-            .navigationBarItems(trailing: EditButton())
-            .navigationBarTitle("Word List", displayMode: .inline)
+        }
     }
     
     func removeRows(at offsets: IndexSet) {
@@ -37,17 +34,7 @@ struct WordListPage: View {
 }
 
 
-struct ResponsivePadding: ViewModifier {
-    let keybordHeight: CGFloat
-    
-    func body(content: Content) -> some View {
-        return content
-            .padding(.bottom, keybordHeight)
-            .edgesIgnoringSafeArea(.bottom)
-            .animation(.easeOut(duration: 0.16))
-    }
-    
-}
+
 
 struct WordListPage_Previews: PreviewProvider {
     static var previews: some View {
