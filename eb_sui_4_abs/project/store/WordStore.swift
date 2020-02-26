@@ -16,7 +16,8 @@ class WordStore: ObservableObject {
     
     func insert(word: String) -> Void {
         if !words.contains(word) {
-            words.insert(word, at: 0)
+//            words.insert(word, at: 0)
+            words.append(word)
         }
     }
 }

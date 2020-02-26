@@ -74,9 +74,8 @@ struct FlashCard: View {
             
         }.onAppear{
             withAnimation(.easeInOut(duration: 1.0)) {
-                self.show.toggle()
+                self.show=true
             }
-            
         }
         
     }

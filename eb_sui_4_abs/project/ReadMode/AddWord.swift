@@ -14,7 +14,11 @@ struct AddWord: View {
     
     @State private var word: String = ""
     
-    private func submit() {
+    private func clickBtn() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        submitTF()
+    }
+    private func submitTF() {
         if !self.word.isEmpty {
             self.wordstore.insert(word: self.word)
             self.word = ""
@@ -23,15 +27,15 @@ struct AddWord: View {
     
     var body: some View {
         HStack(alignment: .center, spacing: 20) {
-            TextField("Add New Word To List", text: $word, onCommit: submit)
+            TextField("Add New Word To List", text: $word, onCommit: submitTF)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
-            Button(action: submit) {
+            Button(action: clickBtn) {
                 Text("ADD")
             }
         }.modifier(ResponsivePadding(keybordHeight: keyboard.currentHeight))
-        .navigationBarItems(trailing: EditButton())
-        .navigationBarTitle("Word List", displayMode: .inline)
+            .navigationBarItems(trailing: EditButton())
+            .navigationBarTitle("Word List", displayMode: .inline)
     }
 }
 
