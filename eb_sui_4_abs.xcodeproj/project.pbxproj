@@ -60,7 +60,7 @@
 		209413DD23DFD15000012024 /* Demo_Eye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209413DC23DFD15000012024 /* Demo_Eye.swift */; };
 		209413DF23E25A3900012024 /* Demo_Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209413DE23E25A3900012024 /* Demo_Face.swift */; };
 		209413E223E3CE9600012024 /* Demo_TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209413E123E3CE9600012024 /* Demo_TimeCounter.swift */; };
-		20C5F95D23FCD16C0038675B /* WordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F95C23FCD16C0038675B /* WordStore.swift */; };
+		20C5F95D23FCD16C0038675B /* WordStore+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F95C23FCD16C0038675B /* WordStore+Observable.swift */; };
 		20C5F96123FCE6D00038675B /* Demo_Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96023FCE6D00038675B /* Demo_Transition.swift */; };
 		20C5F96323FE18280038675B /* Demo_onDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96223FE18280038675B /* Demo_onDelete.swift */; };
 		20C5F96523FE24E80038675B /* Demo_purelyDeleteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96423FE24E80038675B /* Demo_purelyDeleteItem.swift */; };
@@ -128,7 +128,7 @@
 		209413DC23DFD15000012024 /* Demo_Eye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Eye.swift; sourceTree = "<group>"; };
 		209413DE23E25A3900012024 /* Demo_Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Face.swift; sourceTree = "<group>"; };
 		209413E123E3CE9600012024 /* Demo_TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_TimeCounter.swift; sourceTree = "<group>"; };
-		20C5F95C23FCD16C0038675B /* WordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStore.swift; sourceTree = "<group>"; };
+		20C5F95C23FCD16C0038675B /* WordStore+Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordStore+Observable.swift"; sourceTree = "<group>"; };
 		20C5F96023FCE6D00038675B /* Demo_Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Transition.swift; sourceTree = "<group>"; };
 		20C5F96223FE18280038675B /* Demo_onDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_onDelete.swift; sourceTree = "<group>"; };
 		20C5F96423FE24E80038675B /* Demo_purelyDeleteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_purelyDeleteItem.swift; sourceTree = "<group>"; };
@@ -325,7 +325,7 @@
 		20C5F95B23FCD13D0038675B /* store */ = {
 			isa = PBXGroup;
 			children = (
-				20C5F95C23FCD16C0038675B /* WordStore.swift */,
+				20C5F95C23FCD16C0038675B /* WordStore+Observable.swift */,
 			);
 			path = store;
 			sourceTree = "<group>";
@@ -460,7 +460,7 @@
 				209389F123BED2DD00A03D6E /* DemoImage.swift in Sources */,
 				209389DA23BECF2900A03D6E /* ContentView.swift in Sources */,
 				20385CEC23EBBB0400566036 /* Demo_Mouth.swift in Sources */,
-				20C5F95D23FCD16C0038675B /* WordStore.swift in Sources */,
+				20C5F95D23FCD16C0038675B /* WordStore+Observable.swift in Sources */,
 				20938A0123C24D7C00A03D6E /* DemoPicker.swift in Sources */,
 				209389FF23C1356600A03D6E /* DemoSegmentControl.swift in Sources */,
 				209389F923C0EB1600A03D6E /* DemoTextField.swift in Sources */,
