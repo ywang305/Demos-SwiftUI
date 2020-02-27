@@ -12,12 +12,11 @@ import Combine
 class WordStore: ObservableObject {
     static let shared = WordStore()
     
-    @Published var words : [String] = ["sun", "moon", "girl", "tree", "car", "school", "touch"]
+    @Published var readingWords : [String] = ["sun", "moon", "girl", "tree", "car", "school", "touch"]
     
     func insert(word: String) -> Void {
-        if !words.contains(word) {
-//            words.insert(word, at: 0)
-            words.append(word)
+        if !readingWords.contains(word) {
+            self.readingWords.insert(word, at: 0)
         }
     }
 }

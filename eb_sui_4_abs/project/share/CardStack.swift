@@ -11,7 +11,7 @@ import SwiftUI
 struct CardStack: View {
     @ObservedObject private var wordStore = WordStore.shared
     private var words : [String] {
-        self.wordStore.words
+        self.wordStore.readingWords
     }
     
     var body: some View {
@@ -20,7 +20,7 @@ struct CardStack: View {
                 FlashCard(word: w) {
                     // onRemoval
                     let found = self.words.firstIndex(of: w)!
-                    self.wordStore.words.remove(at: found)
+                    self.wordStore.readingWords.remove(at: found)
                 }
                 .scaleEffect( self.getScale(w) )
                 .offset( self.getOffset(w))

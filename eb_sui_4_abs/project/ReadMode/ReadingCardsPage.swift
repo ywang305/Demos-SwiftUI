@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct WordCardPage: View {
+struct ReadingCardsPage: View {
     @State private var open = false
     
     var body: some View {
@@ -33,8 +33,8 @@ struct WordCardPage: View {
     }
 }
 
-struct WordCardPage_Previews: PreviewProvider {
+struct ReadingCardsPage_Previews: PreviewProvider {
     static var previews: some View {
-        WordCardPage()
+        ReadingCardsPage()
     }
 }

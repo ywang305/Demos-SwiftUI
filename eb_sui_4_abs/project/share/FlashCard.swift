@@ -90,8 +90,7 @@ struct CardStyle: ViewModifier {
             .foregroundColor(Color.black)
             .background(Color.blue)
             .clipShape(RoundedRectangle(cornerRadius: 20))
-            .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.yellow.opacity(0.8), lineWidth: 2))
-            //.shadow(radius: 10)
+            .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.yellow.opacity(0.8), lineWidth: 2))            //.shadow(radius: 10)
     }
     
 }

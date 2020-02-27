@@ -9,11 +9,12 @@
 import SwiftUI
 
 struct WordListPage: View {
-
+    @ObservedObject private var keyboard = KeyboardResponder()
+    
     @ObservedObject private var wordStore = WordStore.shared
     
     private var words: [String] {
-        wordStore.words
+        wordStore.readingWords.reversed()
     }
     
     var body: some View {
@@ -24,16 +25,29 @@ struct WordListPage: View {
                     Text("\($0)")
                 }.onDelete(perform: removeRows)
             }
-            AddWord().padding()
-        }
+            AddWord()
+                .padding()
+                .modifier(ResponsivePadding(keybordHeight: keyboard.currentHeight))
+        }.navigationBarItems(trailing: EditButton())
+        .navigationBarTitle("Words To Read", displayMode: .inline)
     }
     
     func removeRows(at offsets: IndexSet) {
-        self.wordStore.words.remove(atOffsets: offsets)
+        self.wordStore.readingWords.remove(atOffsets: offsets)
     }
 }
 
-
+struct ResponsivePadding: ViewModifier {
+    let keybordHeight: CGFloat
+    
+    func body(content: Content) -> some View {
+        return content
+            .padding(.bottom, keybordHeight)
+            .edgesIgnoringSafeArea(.bottom)
+            .animation(.easeOut(duration: 0.16))
+    }
+    
+}
 
 
 struct WordListPage_Previews: PreviewProvider {
