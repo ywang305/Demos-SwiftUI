@@ -36,7 +36,7 @@ extension AnyTransition {
 
 struct FlashCard: View {
     let word: String
-    let onRemoval: (()->Void)?
+    let onRemoval: (()->())?
     
     var drag : some Gesture {
         DragGesture().onChanged{

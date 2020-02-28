@@ -10,20 +10,18 @@ import SwiftUI
 
 struct CardStack: View {
     @ObservedObject private var wordStore = WordStore.shared
-    private var words : [String] {
+    private var words : [Word] {
         self.wordStore.readingWords
     }
     
     var body: some View {
         ZStack {
-            ForEach(words, id: \.self) { w in
-                FlashCard(word: w) {
-                    // onRemoval
-                    let found = self.words.firstIndex(of: w)!
-                    self.wordStore.readingWords.remove(at: found)
-                }
-                .scaleEffect( self.getScale(w) )
-                .offset( self.getOffset(w))
+            ForEach(words) { w in
+                FlashCard(word: w.word, onRemoval: {
+                    self.wordStore.remove(at: w.seq)
+                })
+                    .scaleEffect( self.getScale(w.seq))
+                    .offset(self.getOffSize(w.seq))
             }
             
         }
@@ -32,33 +30,29 @@ struct CardStack: View {
 
 
 extension CardStack {
-    private func getScale(_ w: String) -> CGFloat {
-        let ind = self.words.lastIndex(of: w)
+    private func getScale(_ seq: Int) -> CGFloat {
         let endInd = self.words.endIndex
-        
         var scale: CGFloat = 0.8
-        if ind==endInd-1 {
+        if seq==endInd-1 {
             scale = 1
-        } else if ind==endInd-2 {
+        } else if seq==endInd-2 {
             scale = 0.9
         }
-        
         return scale
     }
-    
-    private func getOffset(_ w: String) -> CGSize {
-        let ind = self.words.lastIndex(of: w)
+
+    private func getOffSize(_ seq: Int) -> CGSize {
         let endInd = self.words.endIndex
-        
+
         var size: CGSize = .zero
-        if ind==endInd-1 {
+        if seq==endInd-1 {
             size.height = 0
-        } else if ind==endInd-2 {
+        } else if seq==endInd-2 {
             size.height = -30
         } else {
             size.height = -60
         }
-        
+
         return size
     }
 }

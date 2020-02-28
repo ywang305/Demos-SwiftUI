@@ -10,10 +10,9 @@ import SwiftUI
 
 struct WordListPage: View {
     @ObservedObject private var keyboard = KeyboardResponder()
-    
     @ObservedObject private var wordStore = WordStore.shared
     
-    private var words: [String] {
+    private var words: [Word] {
         wordStore.readingWords.reversed()
     }
     
@@ -21,8 +20,8 @@ struct WordListPage: View {
         VStack {
             List {
                 //the onDelete() modifier only exists on ForEach
-                ForEach(words, id: \.self) {
-                    Text("\($0)")
+                ForEach(words) {
+                    Text("\($0.word)")
                 }.onDelete(perform: removeRows)
             }
             AddWord()
@@ -46,7 +45,6 @@ struct ResponsivePadding: ViewModifier {
             .edgesIgnoringSafeArea(.bottom)
             .animation(.easeOut(duration: 0.16))
     }
-    
 }
 
 

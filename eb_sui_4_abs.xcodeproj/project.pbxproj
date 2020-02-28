@@ -68,6 +68,7 @@
 		20C5F96A24031A090038675B /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96924031A090038675B /* CardStack.swift */; };
 		20C5F96D2404C1E70038675B /* ReadingCardsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96C2404C1E70038675B /* ReadingCardsPage.swift */; };
 		20C5F96F2404C5790038675B /* WordListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F96E2404C5790038675B /* WordListPage.swift */; };
+		20C5F9952408AB850038675B /* Word+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5F9942408AB850038675B /* Word+Identifiable.swift */; };
 		DA11886824056BCE00125774 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11886724056BCE00125774 /* KeyboardResponder.swift */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		20C5F96924031A090038675B /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
 		20C5F96C2404C1E70038675B /* ReadingCardsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingCardsPage.swift; sourceTree = "<group>"; };
 		20C5F96E2404C5790038675B /* WordListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListPage.swift; sourceTree = "<group>"; };
+		20C5F9942408AB850038675B /* Word+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Word+Identifiable.swift"; sourceTree = "<group>"; };
 		DA11886724056BCE00125774 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyboardResponder.swift; path = eb_sui_4_abs/project/utils/KeyboardResponder.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -325,6 +327,7 @@
 		20C5F95B23FCD13D0038675B /* store */ = {
 			isa = PBXGroup;
 			children = (
+				20C5F9912408AB550038675B /* model */,
 				20C5F95C23FCD16C0038675B /* WordStore+Observable.swift */,
 			);
 			path = store;
@@ -347,6 +350,14 @@
 				20C5F96924031A090038675B /* CardStack.swift */,
 			);
 			path = share;
+			sourceTree = "<group>";
+		};
+		20C5F9912408AB550038675B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				20C5F9942408AB850038675B /* Word+Identifiable.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		DA11886924056BEE00125774 /* utils */ = {
@@ -445,6 +456,7 @@
 				209389FD23C1341000A03D6E /* DemoStepper.swift in Sources */,
 				20938A1A23C81CAB00A03D6E /* Demo_Gradient.swift in Sources */,
 				2044C8F223CD59BE0016BD34 /* Demo_Tap.swift in Sources */,
+				20C5F9952408AB850038675B /* Word+Identifiable.swift in Sources */,
 				2044C8F623CD5E920016BD34 /* Demo_Drag.swift in Sources */,
 				20C5F96A24031A090038675B /* CardStack.swift in Sources */,
 				DA11886824056BCE00125774 /* KeyboardResponder.swift in Sources */,
@@ -632,7 +644,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.manfen.eb-sui-4-abs-project";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.manfen.eb-sui-4-abs-x2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -654,7 +666,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.manfen.eb-sui-4-abs-project";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.manfen.eb-sui-4-abs-x2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

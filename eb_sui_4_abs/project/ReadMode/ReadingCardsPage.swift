@@ -9,27 +9,28 @@
 import SwiftUI
 
 struct ReadingCardsPage: View {
-    @State private var open = false
+    @ObservedObject private var keyboard = KeyboardResponder()
     
     var body: some View {
         NavigationView {
-            
-            VStack {
+            VStack{
                 Spacer()
                 CardStack()
                 Spacer()
-                NavigationLink(destination: WordListPage()) {
-                    Image(systemName: "list.dash")
-                    .resizable()
-                    .frame(width: 30, height: 20, alignment: .center)
-                }
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: WordListPage()) {
+                        Image(systemName: "list.dash")
+                            .resizable()
+                            .frame(width: 30, height: 20, alignment: .center)
+                    }
+                }.padding(.bottom, 12)
                 
-                
-                }.padding()
-            
+                AddWord()
+                    .modifier(ResponsivePadding(keybordHeight: keyboard.currentHeight))
+            }.padding()
             
         }
-        
     }
 }
 

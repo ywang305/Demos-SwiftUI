@@ -12,11 +12,18 @@ import Combine
 class WordStore: ObservableObject {
     static let shared = WordStore()
     
-    @Published var readingWords : [String] = ["sun", "moon", "girl", "tree", "car", "school", "touch"]
+    @Published var readingWords : [Word] = ["sun", "moon", "girl", "tree", "car", "school", "touch"].enumerated().map{ i, str in
+        Word(str, seq: i)
+    }
     
     func insert(word: String) -> Void {
-        if !readingWords.contains(word) {
-            self.readingWords.insert(word, at: 0)
+        if !readingWords.contains(where: { $0.word==word}) {
+            let seq = self.readingWords.count
+            self.readingWords.append(Word(word, seq: seq))
         }
+    }
+    
+    func remove(at index: Int) {
+        self.readingWords.remove(at: index)
     }
 }
