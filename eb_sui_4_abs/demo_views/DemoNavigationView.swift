@@ -9,10 +9,32 @@
 import SwiftUI
 
 struct DemoNavigationView: View {
+    struct DetailView : View {
+        var body: some View {
+            NavigationView {
+                Text("New Details").navigationBarTitle("Detail title", displayMode: .automatic)
+            }
+        }
+    }
+    
+    
     var body: some View {
         NavigationView {
-            NavigationLink("Click to Detail", destination: Text("New Details"))
-                .navigationBarTitle("Domain Master")
+            VStack {
+                ForEach(0..<3) { _ in
+                    NavigationLink(destination: DetailView()) {
+                        HStack{
+                            Image(systemName: "cloud.fill")
+                            Text("click to details")
+                        }.padding()
+                            .background(Color.purple)
+                            .foregroundColor(Color.yellow)
+                            .cornerRadius(8)
+                        .shadow(radius: 10)
+                    }
+                }
+                
+            }.navigationBarTitle("Master Title")
         }
     }
 }
