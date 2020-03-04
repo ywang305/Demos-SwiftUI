@@ -8,21 +8,15 @@
 
 import SwiftUI
 
+
+
 struct DemoNavigationView: View {
-    struct DetailView : View {
-        var body: some View {
-            NavigationView {
-                Text("New Details").navigationBarTitle("Detail title", displayMode: .automatic)
-            }
-        }
-    }
-    
-    
+
     var body: some View {
         NavigationView {
             VStack {
                 ForEach(0..<3) { _ in
-                    NavigationLink(destination: DetailView()) {
+                    NavigationLink(destination: DemoNavigationBarItems()) {
                         HStack{
                             Image(systemName: "cloud.fill")
                             Text("click to details")
@@ -40,13 +34,12 @@ struct DemoNavigationView: View {
 }
 struct DemoNavigationBarItems: View {
     var body: some View {
-        NavigationView {
+//        NavigationView {
             List {
                 NavigationLink("Go to detail 1", destination: Text("Detail One"))
                 NavigationLink("Go to detail 2", destination: Text("Detail Two"))
-            }.navigationBarItems(trailing: Button("Click me"){}).navigationBarTitle(Text("Nav list"))
-        }
-        
+            }.navigationBarItems(trailing: Button("Click me"){}).navigationBarTitle(Text("Nav list"), displayMode: .inline)
+//        }
     }
 }
 
@@ -54,7 +47,6 @@ struct DemoNavigationView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             DemoNavigationView()
-            DemoNavigationBarItems()
         }
         
     }
