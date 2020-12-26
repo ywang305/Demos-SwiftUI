@@ -44,24 +44,24 @@ struct Demo_Observable: View {
             HStack {
                 // 2.
                 Button(action: {
-                    self.stopwatch.start()
+                    stopwatch.start()
                 }) {
                     Text("Start")
                 }
                 
                 Button(action: {
-                    self.stopwatch.stop()
+                    stopwatch.stop()
                 }) {
                     Text("Stop")
                 }
                 Button(action: {
-                    self.stopwatch.reset()
+                    stopwatch.reset()
                 }) {
                     Text("Reset")
                 }
             }
             // 3.
-            Text("\(self.stopwatch.counter)")
+            Text("\(stopwatch.counter)")
         }.font(.largeTitle)
     }
 }

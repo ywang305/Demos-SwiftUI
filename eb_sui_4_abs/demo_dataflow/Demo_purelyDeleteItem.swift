@@ -47,9 +47,9 @@ struct Demo_purelyDeleteItem: View {
                         }
                     }
                 }.navigationBarTitle("Songs")
-            }
         }
     }
+}
     
     struct Demo_purelyDeleteItem_Previews: PreviewProvider {
         static var previews: some View {
