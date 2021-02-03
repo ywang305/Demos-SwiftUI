@@ -14,7 +14,7 @@ struct User {
 }
 
 
-struct StateTest: View {
+struct RerenderTest: View {
     @State private var user: User = User(username: "Yao", email: "yao@apple.com")
     
     var body: some View {
@@ -33,13 +33,16 @@ struct StateTest: View {
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(Color.purple, lineWidth: 5)
             )
+        }.onAppear {
+            print(self.$user)
+            // only render once, no matter how many re-render caused by @state change
         }
         
     }
 }
 
-struct StateTest_Previews: PreviewProvider {
+struct RerenderTest_Previews: PreviewProvider {
     static var previews: some View {
-        StateTest()
+        RerenderTest()
     }
 }
