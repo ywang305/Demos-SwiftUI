@@ -14,7 +14,7 @@ struct Demo_Animation: View {
     var body: some View {
         VStack{
             // explicit animation
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text("Hello, Edwin!")
                 .scaleEffect(jiggle ? 1.0: 3.0)
                 .animation(Animation.spring().repeatForever())
                 .onAppear {
@@ -28,7 +28,13 @@ struct Demo_Animation: View {
                         self.jiggle.toggle()
                     }
             }
-        }
+            Text("Hello Chen")
+                .scaleEffect(jiggle ? 1.0: 3.0)
+                .onAppear{
+                    withAnimation(Animation.spring().repeatForever()) {
+                        self.jiggle.toggle()
+                    }
+            }        }
         
     }
 }

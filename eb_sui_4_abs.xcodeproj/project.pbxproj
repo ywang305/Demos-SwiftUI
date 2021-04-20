@@ -22,10 +22,12 @@
 		2044C8F223CD59BE0016BD34 /* Demo_Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044C8F123CD59BE0016BD34 /* Demo_Tap.swift */; };
 		2044C8F423CD5DE10016BD34 /* Demo_LongPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044C8F323CD5DE10016BD34 /* Demo_LongPress.swift */; };
 		2044C8F623CD5E920016BD34 /* Demo_Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044C8F523CD5E920016BD34 /* Demo_Drag.swift */; };
+		206C747A262E5C8D00953DEE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 206C7479262E5C8D00953DEE /* Podfile */; };
 		20778C0425CA57FD00D7C3FD /* RerenderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20778C0325CA57FD00D7C3FD /* RerenderTest.swift */; };
 		208713782597CBAB009A0A93 /* DemoPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208713772597CBAB009A0A93 /* DemoPresent.swift */; };
 		2087137D2597DDC8009A0A93 /* ImagePickerView in Frameworks */ = {isa = PBXBuildFile; productRef = 2087137C2597DDC8009A0A93 /* ImagePickerView */; };
 		208713802597DDEE009A0A93 /* DemoSPD_ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087137F2597DDEE009A0A93 /* DemoSPD_ImagePicker.swift */; };
+		208FDEDB262E800D00C00ACA /* Demo_TradingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208FDEDA262E800D00C00ACA /* Demo_TradingView.swift */; };
 		209389D623BECF2900A03D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209389D523BECF2900A03D6E /* AppDelegate.swift */; };
 		209389D823BECF2900A03D6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209389D723BECF2900A03D6E /* SceneDelegate.swift */; };
 		209389DA23BECF2900A03D6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209389D923BECF2900A03D6E /* ContentView.swift */; };
@@ -92,9 +94,11 @@
 		2044C8F123CD59BE0016BD34 /* Demo_Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Tap.swift; sourceTree = "<group>"; };
 		2044C8F323CD5DE10016BD34 /* Demo_LongPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_LongPress.swift; sourceTree = "<group>"; };
 		2044C8F523CD5E920016BD34 /* Demo_Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Drag.swift; sourceTree = "<group>"; };
+		206C7479262E5C8D00953DEE /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		20778C0325CA57FD00D7C3FD /* RerenderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RerenderTest.swift; sourceTree = "<group>"; };
 		208713772597CBAB009A0A93 /* DemoPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPresent.swift; sourceTree = "<group>"; };
 		2087137F2597DDEE009A0A93 /* DemoSPD_ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSPD_ImagePicker.swift; sourceTree = "<group>"; };
+		208FDEDA262E800D00C00ACA /* Demo_TradingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_TradingView.swift; sourceTree = "<group>"; };
 		209389D223BECF2900A03D6E /* eb_sui_4_abs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eb_sui_4_abs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		209389D523BECF2900A03D6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		209389D723BECF2900A03D6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 		209389C923BECF2900A03D6E = {
 			isa = PBXGroup;
 			children = (
+				206C7479262E5C8D00953DEE /* Podfile */,
 				209389D423BECF2900A03D6E /* eb_sui_4_abs */,
 				209389D323BECF2900A03D6E /* Products */,
 				209413D423DA9D5E00012024 /* Frameworks */,
@@ -292,6 +297,7 @@
 				209413D123DA77B300012024 /* spritkit */,
 				209413C223D91BA100012024 /* Demo_MapKit.swift */,
 				209413CC23DA74F700012024 /* Demo_WebKit.swift */,
+				208FDEDA262E800D00C00ACA /* Demo_TradingView.swift */,
 			);
 			path = demo_uikit;
 			sourceTree = "<group>";
@@ -453,6 +459,7 @@
 			files = (
 				209389E223BECF2A00A03D6E /* LaunchScreen.storyboard in Resources */,
 				209389DF23BECF2A00A03D6E /* Preview Assets.xcassets in Resources */,
+				206C747A262E5C8D00953DEE /* Podfile in Resources */,
 				209389DC23BECF2A00A03D6E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +528,7 @@
 				20938A0D23C424E500A03D6E /* DemoSpacerDivider.swift in Sources */,
 				20385CF423F242C100566036 /* Demo_Shape.swift in Sources */,
 				209413D023DA776800012024 /* Demo_SKView.swift in Sources */,
+				208FDEDB262E800D00C00ACA /* Demo_TradingView.swift in Sources */,
 				209413C923D9421600012024 /* Demo_Login.swift in Sources */,
 				209389F523BEE4B600A03D6E /* DemoButton.swift in Sources */,
 				20385CF823F39E8200566036 /* Demo_Body.swift in Sources */,

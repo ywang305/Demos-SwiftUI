@@ -31,7 +31,7 @@ struct Demo_Stroke: View {
         VStack(alignment: .leading, spacing: 100) {
             Rectangle().stroke(lineWidth: 10)
             
-            Rectangle().stroke(style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round, miterLimit: 0, dash: [0, 5], dashPhase: 0))
+            Rectangle().stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round, miterLimit: 0, dash: [0, 5], dashPhase: 0))
         }.padding()
         
     }

@@ -15,7 +15,7 @@ struct Demo_Path: View {
     var body: some View {
         VStack{
             Path { path in
-                path.move(to: CGPoint(x: 10, y: 10))
+                path.move(to: CGPoint(x: 30, y: 30))
                 path.addLine(to: CGPoint(x: 10, y: 210))
                 path.addLine(to: CGPoint(x: 210, y: 210))
                 path.addLine(to: CGPoint(x: 210, y: 10))

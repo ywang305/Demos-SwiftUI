@@ -17,6 +17,10 @@ struct Demo_Gradient: View {
 
 struct Demo_Gradient_Previews: PreviewProvider {
     static var previews: some View {
-        Demo_Gradient()
+        Group {
+            Demo_Gradient()
+            Demo_Gradient()
+            Demo_Gradient()
+        }
     }
 }
